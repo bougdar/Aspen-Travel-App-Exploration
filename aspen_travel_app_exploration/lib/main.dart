@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:aspen_travel_app_exploration/view/pages/login.dart';
+import 'package:get/get.dart';
+
+
+import 'route.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,17 +19,17 @@ class MyApp extends StatelessWidget {
       designSize: figmaDesignSize,
       minTextAdapt: true,
       splitScreenMode: true,
-      builder: (context, child) {
-        return MaterialApp(
+      builder: (context, _) {
+        return GetMaterialApp(
           title: 'Flutter Demo',
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          home: child,
+          initialRoute: '/login',
+          getPages: AppRoutes.routes,
         );
       },
-      child:  LoginPage(),
     );
   }
 }
