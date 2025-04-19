@@ -16,6 +16,8 @@ class HomePage extends StatelessWidget {
           Header(),
           SizedBox(height: 50),
           Search(),
+          SizedBox(height: 50),
+          Category()
         ],
       ),
       bottomNavigationBar: BottomBar(),
@@ -141,6 +143,94 @@ class Search extends StatelessWidget {
                   isCollapsed: true,
                   contentPadding: EdgeInsets.zero,
                 ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class Category extends StatelessWidget {
+  const Category({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.only(left: 20.w),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          spacing: 28,
+          children: [
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+              decoration: ShapeDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment(0.99, 0.72),
+                  end: Alignment(-0.03, 0.23),
+                  colors: [const Color(0xFFF3F8FE), const Color(0xFFF3F8FE)],
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(33),
+                ),
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                spacing: 10,
+                children: [
+                  Text(
+                    'Location',
+                    style: TextStyle(
+                      color: const Color(0xFF176EF2),
+                      fontSize: 14,
+                      fontFamily: 'CircularXX',
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Text(
+              'Hotels',
+              style: TextStyle(
+                color: const Color(0xFFB7B7B7),
+                fontSize: 14,
+                fontFamily: 'CircularXX',
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+            Text(
+              'Food',
+              style: TextStyle(
+                color: const Color(0xFFB7B7B7),
+                fontSize: 14,
+                fontFamily: 'CircularXX',
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+            Text(
+              'Adventure',
+              style: TextStyle(
+                color: const Color(0xFFB7B7B7),
+                fontSize: 14,
+                fontFamily: 'CircularXX',
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+            Text(
+              'Adventure',
+              style: TextStyle(
+                color: const Color(0xFFB7B7B7),
+                fontSize: 14,
+                fontFamily: 'CircularXX',
+                fontWeight: FontWeight.w400,
               ),
             ),
           ],
