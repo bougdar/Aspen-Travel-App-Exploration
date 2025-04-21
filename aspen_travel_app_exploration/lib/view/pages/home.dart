@@ -10,17 +10,23 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Column(
-        children: const [
-          SizedBox(height: 50),
-          Header(),
-          SizedBox(height: 50),
-          Search(),
-          SizedBox(height: 50),
-          Category(),
-          SizedBox(height: 50),
-          Popular()
-        ],
+      body: SafeArea(
+        top: true,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Header(),
+              SizedBox(height: 25),
+              Search(),
+              SizedBox(height: 25),
+              Category(),
+              SizedBox(height: 25),
+              Popular(),
+              SizedBox(height: 25),
+              Recommended(),
+            ],
+          ),
+        ),
       ),
       bottomNavigationBar: BottomBar(),
     );
@@ -34,7 +40,6 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        color: Colors.amber,
         width: 335.w,
         height: 56.h,
         child: Stack(
@@ -352,7 +357,6 @@ class Popular extends StatelessWidget {
                                     child: SvgPicture.asset(
                                       'assets/icons/Group 3418.svg',
                                       width: 15.w,
-
                                     ),
                                   ),
                                 ],
@@ -419,8 +423,8 @@ class Popular extends StatelessWidget {
                                             children: [
                                               SvgPicture.asset(
                                                 'assets/icons/star.svg',
-                                          width: 16.w,
-                                          height: 16.h,
+                                                width: 16.w,
+                                                height: 16.h,
                                               ),
                                             ],
                                           )),
@@ -443,7 +447,7 @@ class Popular extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(width: 16),
-                                        Container(
+                    Container(
                       width: 188.w,
                       height: 240.h,
                       child: Stack(
@@ -511,7 +515,6 @@ class Popular extends StatelessWidget {
                                     child: SvgPicture.asset(
                                       'assets/icons/Group 3418.svg',
                                       width: 15.w,
-
                                     ),
                                   ),
                                 ],
@@ -578,8 +581,8 @@ class Popular extends StatelessWidget {
                                             children: [
                                               SvgPicture.asset(
                                                 'assets/icons/star.svg',
-                                          width: 16.w,
-                                          height: 16.h,
+                                                width: 16.w,
+                                                height: 16.h,
                                               ),
                                             ],
                                           )),
@@ -602,7 +605,7 @@ class Popular extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(width: 16),
-                                        Container(
+                    Container(
                       width: 188.w,
                       height: 240.h,
                       child: Stack(
@@ -670,7 +673,6 @@ class Popular extends StatelessWidget {
                                     child: SvgPicture.asset(
                                       'assets/icons/Group 3418.svg',
                                       width: 15.w,
-
                                     ),
                                   ),
                                 ],
@@ -737,8 +739,8 @@ class Popular extends StatelessWidget {
                                             children: [
                                               SvgPicture.asset(
                                                 'assets/icons/star.svg',
-                                          width: 16.w,
-                                          height: 16.h,
+                                                width: 16.w,
+                                                height: 16.h,
                                               ),
                                             ],
                                           )),
@@ -760,7 +762,7 @@ class Popular extends StatelessWidget {
                         ],
                       ),
                     ),
-                    ],
+                  ],
                 ),
               )
             ],
@@ -768,5 +770,568 @@ class Popular extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class Recommended extends StatelessWidget {
+  const Recommended({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        width: 364.w,
+        height: 190.h,
+        decoration: ShapeDecoration(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
+        ),
+        child: Column(
+          children: [
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Container(
+                padding: EdgeInsets.only(left: 20.w),
+                child: Text(
+                  'Recommended',
+                  style: TextStyle(
+                    color: const Color(0xFF232323),
+                    fontSize: 18,
+                    fontFamily: 'Montserrat',
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+            ),
+            SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  SizedBox(width: 20.w,),
+                  Container(
+                    padding: const EdgeInsets.only(right:4,top: 4),
+                    decoration: ShapeDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment(0.01, 0.06),
+                        end: Alignment(0.96, 0.89),
+                        colors: [Colors.white, const Color(0xFFF5F5F5)],
+                      ),
+                      shape: RoundedRectangleBorder(
+                        side: BorderSide(
+                          width: 1,
+                          color: const Color(0xFFF4F4F4),
+                        ),
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      shadows: [
+                        BoxShadow(
+                          color: Color(0x2B979FB2),
+                          blurRadius: 20,
+                          offset: Offset(0, 4),
+                          spreadRadius: 0,
+                        )
+                      ],
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          width: 166.w,
+                          height: 96.h,
+                          decoration: ShapeDecoration(
+                            image: DecorationImage(
+                              image: AssetImage(
+                                  "assets/images/istockphoto-104731717-612x612.jpg"),
+                              fit: BoxFit.cover,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 4, vertical: 2),
+                          decoration: ShapeDecoration(
+                            color: const Color(0xFF3A544F),
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(
+                                width: 2,
+                                strokeAlign: BorderSide.strokeAlignOutside,
+                                color: Colors.white,
+                              ),
+                              borderRadius: BorderRadius.circular(9),
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            spacing: 10,
+                            children: [
+                              Text(
+                                '4N/5D',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 10,
+                                  fontFamily: 'Montserrat',
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Column(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          spacing: 3,
+                          children: [
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              spacing: 10,
+                              children: [
+                                Text(
+                                  'Explore Aspen',
+                                  style: TextStyle(
+                                    color: const Color(0xFF232323),
+                                    fontSize: 14,
+                                    fontFamily: 'CircularXX',
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Container(
+                              padding: const EdgeInsets.only(left: 2),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                spacing: 4,
+                                children: [
+                                  Container(
+                                    width: 12,
+                                    height: 12,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(),
+                                    child: Stack(),
+                                  ),
+                                  Text(
+                                    'Hot Deal',
+                                    style: TextStyle(
+                                      color: const Color(0xFF3A544F),
+                                      fontSize: 10,
+                                      fontFamily: 'CircularXX',
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                                  Container(
+                    padding: const EdgeInsets.only(right:4,top: 4),
+                    decoration: ShapeDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment(0.01, 0.06),
+                        end: Alignment(0.96, 0.89),
+                        colors: [Colors.white, const Color(0xFFF5F5F5)],
+                      ),
+                      shape: RoundedRectangleBorder(
+                        side: BorderSide(
+                          width: 1,
+                          color: const Color(0xFFF4F4F4),
+                        ),
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      shadows: [
+                        BoxShadow(
+                          color: Color(0x2B979FB2),
+                          blurRadius: 20,
+                          offset: Offset(0, 4),
+                          spreadRadius: 0,
+                        )
+                      ],
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          width: 166.w,
+                          height: 96.h,
+                          decoration: ShapeDecoration(
+                            image: DecorationImage(
+                              image: AssetImage(
+                                  "assets/images/istockphoto-104731717-612x612.jpg"),
+                              fit: BoxFit.cover,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 4, vertical: 2),
+                          decoration: ShapeDecoration(
+                            color: const Color(0xFF3A544F),
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(
+                                width: 2,
+                                strokeAlign: BorderSide.strokeAlignOutside,
+                                color: Colors.white,
+                              ),
+                              borderRadius: BorderRadius.circular(9),
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            spacing: 10,
+                            children: [
+                              Text(
+                                '4N/5D',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 10,
+                                  fontFamily: 'Montserrat',
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Column(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          spacing: 3,
+                          children: [
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              spacing: 10,
+                              children: [
+                                Text(
+                                  'Explore Aspen',
+                                  style: TextStyle(
+                                    color: const Color(0xFF232323),
+                                    fontSize: 14,
+                                    fontFamily: 'CircularXX',
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Container(
+                              padding: const EdgeInsets.only(left: 2),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                spacing: 4,
+                                children: [
+                                  Container(
+                                    width: 12,
+                                    height: 12,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(),
+                                    child: Stack(),
+                                  ),
+                                  Text(
+                                    'Hot Deal',
+                                    style: TextStyle(
+                                      color: const Color(0xFF3A544F),
+                                      fontSize: 10,
+                                      fontFamily: 'CircularXX',
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                                  Container(
+                    padding: const EdgeInsets.only(right:4,top: 4),
+                    decoration: ShapeDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment(0.01, 0.06),
+                        end: Alignment(0.96, 0.89),
+                        colors: [Colors.white, const Color(0xFFF5F5F5)],
+                      ),
+                      shape: RoundedRectangleBorder(
+                        side: BorderSide(
+                          width: 1,
+                          color: const Color(0xFFF4F4F4),
+                        ),
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      shadows: [
+                        BoxShadow(
+                          color: Color(0x2B979FB2),
+                          blurRadius: 20,
+                          offset: Offset(0, 4),
+                          spreadRadius: 0,
+                        )
+                      ],
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          width: 166.w,
+                          height: 96.h,
+                          decoration: ShapeDecoration(
+                            image: DecorationImage(
+                              image: AssetImage(
+                                  "assets/images/istockphoto-104731717-612x612.jpg"),
+                              fit: BoxFit.cover,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 4, vertical: 2),
+                          decoration: ShapeDecoration(
+                            color: const Color(0xFF3A544F),
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(
+                                width: 2,
+                                strokeAlign: BorderSide.strokeAlignOutside,
+                                color: Colors.white,
+                              ),
+                              borderRadius: BorderRadius.circular(9),
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            spacing: 10,
+                            children: [
+                              Text(
+                                '4N/5D',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 10,
+                                  fontFamily: 'Montserrat',
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Column(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          spacing: 3,
+                          children: [
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              spacing: 10,
+                              children: [
+                                Text(
+                                  'Explore Aspen',
+                                  style: TextStyle(
+                                    color: const Color(0xFF232323),
+                                    fontSize: 14,
+                                    fontFamily: 'CircularXX',
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Container(
+                              padding: const EdgeInsets.only(left: 2),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                spacing: 4,
+                                children: [
+                                  Container(
+                                    width: 12,
+                                    height: 12,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(),
+                                    child: Stack(),
+                                  ),
+                                  Text(
+                                    'Hot Deal',
+                                    style: TextStyle(
+                                      color: const Color(0xFF3A544F),
+                                      fontSize: 10,
+                                      fontFamily: 'CircularXX',
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                                  Container(
+                    padding: const EdgeInsets.only(right:4,top: 4),
+                    decoration: ShapeDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment(0.01, 0.06),
+                        end: Alignment(0.96, 0.89),
+                        colors: [Colors.white, const Color(0xFFF5F5F5)],
+                      ),
+                      shape: RoundedRectangleBorder(
+                        side: BorderSide(
+                          width: 1,
+                          color: const Color(0xFFF4F4F4),
+                        ),
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      shadows: [
+                        BoxShadow(
+                          color: Color(0x2B979FB2),
+                          blurRadius: 20,
+                          offset: Offset(0, 4),
+                          spreadRadius: 0,
+                        )
+                      ],
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          width: 166.w,
+                          height: 96.h,
+                          decoration: ShapeDecoration(
+                            image: DecorationImage(
+                              image: AssetImage(
+                                  "assets/images/istockphoto-104731717-612x612.jpg"),
+                              fit: BoxFit.cover,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 4, vertical: 2),
+                          decoration: ShapeDecoration(
+                            color: const Color(0xFF3A544F),
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(
+                                width: 2,
+                                strokeAlign: BorderSide.strokeAlignOutside,
+                                color: Colors.white,
+                              ),
+                              borderRadius: BorderRadius.circular(9),
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            spacing: 10,
+                            children: [
+                              Text(
+                                '4N/5D',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 10,
+                                  fontFamily: 'Montserrat',
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Column(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          spacing: 3,
+                          children: [
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              spacing: 10,
+                              children: [
+                                Text(
+                                  'Explore Aspen',
+                                  style: TextStyle(
+                                    color: const Color(0xFF232323),
+                                    fontSize: 14,
+                                    fontFamily: 'CircularXX',
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Container(
+                              padding: const EdgeInsets.only(left: 2),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                spacing: 4,
+                                children: [
+                                  Container(
+                                    width: 12,
+                                    height: 12,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(),
+                                    child: Stack(),
+                                  ),
+                                  Text(
+                                    'Hot Deal',
+                                    style: TextStyle(
+                                      color: const Color(0xFF3A544F),
+                                      fontSize: 10,
+                                      fontFamily: 'CircularXX',
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            )
+          ],
+        ));
   }
 }
