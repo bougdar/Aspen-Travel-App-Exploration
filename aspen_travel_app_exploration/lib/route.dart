@@ -1,4 +1,5 @@
 import 'package:aspen_travel_app_exploration/view/pages/Ticket.dart';
+import 'package:aspen_travel_app_exploration/view/pages/details.dart';
 import 'package:aspen_travel_app_exploration/view/pages/favourite.dart';
 import 'package:aspen_travel_app_exploration/view/pages/home.dart';
 import 'package:aspen_travel_app_exploration/view/pages/profile.dart';
@@ -12,6 +13,8 @@ class AppRoutes {
     GetPage(name: '/TicketPage', page: () => const TicketPage()),
     GetPage(name: '/FavouritePage', page: () => const FavouritePage()),
     GetPage(name: '/ProfilePage', page: () => ProfilePage()),
+        GetPage(name: '/DetailsPage', page: () => DetailsPage()),
+
 
   ];
 }
