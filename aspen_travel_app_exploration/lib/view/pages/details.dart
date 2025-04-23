@@ -14,6 +14,10 @@ class DetailsPage extends StatelessWidget {
           child: Column(
             children: [
               ProductImage(),
+              SizedBox(
+                height: 25,
+              ),
+              ProductInfo()
             ],
           ),
         ));
@@ -109,6 +113,126 @@ class ProductImage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8)),
                 ),
                 child: Stack(),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class ProductInfo extends StatelessWidget {
+  const ProductInfo({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        width: 335.w,
+        height: 167.h,
+        child: Stack(
+          children: [
+            Positioned(
+              left: 0,
+              top: 68,
+              child: SizedBox(
+                width: 335.w,
+                child: Text(
+                  'Aspen is as close as one can get to a storybook alpine town in America. The choose-your-own-adventure possibilities—skiing, hiking, dining shopping and ....',
+                  style: TextStyle(
+                    color: const Color(0xFF3A544F),
+                    fontSize: 14,
+                    fontFamily: 'CircularXX',
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              left: 0,
+              top: 145.h,
+              child: Text(
+                'Read more',
+                style: TextStyle(
+                  color: const Color(0xFF176EF2),
+                  fontSize: 14,
+                  fontFamily: 'CircularXX',
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ),
+            Positioned(
+              left: 740.w,
+              top: 167.h,
+              child: Container(
+                transform: Matrix4.identity()
+                  ..translate(0.0, 0.0)
+                  ..rotateZ(-1.57),
+                width: 24.w,
+                height: 24.h,
+                clipBehavior: Clip.antiAlias,
+                decoration: ShapeDecoration(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8)),
+                ),
+                child: Stack(),
+              ),
+            ),
+            Positioned(
+              left: 3.w,
+              top: 35.h,
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                spacing: 9.w,
+                children: [
+                  Container(
+                      width: 16.w,
+                      height: 16.h,
+                      child: Stack(
+                        children: [
+                          SvgPicture.asset('assets/icons/star.svg',
+                              width: 16.w, height: 16.h),
+                        ],
+                      )),
+                  Text(
+                    '4.5 (355 Reviews)',
+                    style: TextStyle(
+                      color: const Color(0xFF5F5F5F),
+                      fontSize: 12,
+                      fontFamily: 'CircularXX',
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Positioned(
+              left: 266.w,
+              top: 10.h,
+              child: Text(
+                'Show map',
+                style: TextStyle(
+                  color: const Color(0xFF176EF2),
+                  fontSize: 14,
+                  fontFamily: 'CircularXX',
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ),
+            Positioned(
+              left: 0,
+              top: 0,
+              child: Text(
+                'Coeurdes Alpes',
+                style: TextStyle(
+                  color: const Color(0xFF232323),
+                  fontSize: 24,
+                  fontFamily: 'Montserrat',
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ),
           ],

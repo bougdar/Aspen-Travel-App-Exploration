@@ -804,12 +804,14 @@ class Recommended extends StatelessWidget {
               ),
             ),
             SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
+              scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  SizedBox(width: 20.w,),
+                  SizedBox(
+                    width: 20.w,
+                  ),
                   Container(
-                    padding: const EdgeInsets.only(right:4,top: 4),
+                    padding: const EdgeInsets.only(right: 4, top: 4),
                     decoration: ShapeDecoration(
                       gradient: LinearGradient(
                         begin: Alignment(0.01, 0.06),
@@ -938,8 +940,8 @@ class Recommended extends StatelessWidget {
                       ],
                     ),
                   ),
-                                  Container(
-                    padding: const EdgeInsets.only(right:4,top: 4),
+                  Container(
+                    padding: const EdgeInsets.only(right: 4, top: 4),
                     decoration: ShapeDecoration(
                       gradient: LinearGradient(
                         begin: Alignment(0.01, 0.06),
@@ -1068,8 +1070,8 @@ class Recommended extends StatelessWidget {
                       ],
                     ),
                   ),
-                                  Container(
-                    padding: const EdgeInsets.only(right:4,top: 4),
+                  Container(
+                    padding: const EdgeInsets.only(right: 4, top: 4),
                     decoration: ShapeDecoration(
                       gradient: LinearGradient(
                         begin: Alignment(0.01, 0.06),
@@ -1198,8 +1200,8 @@ class Recommended extends StatelessWidget {
                       ],
                     ),
                   ),
-                                  Container(
-                    padding: const EdgeInsets.only(right:4,top: 4),
+                  Container(
+                    padding: const EdgeInsets.only(right: 4, top: 4),
                     decoration: ShapeDecoration(
                       gradient: LinearGradient(
                         begin: Alignment(0.01, 0.06),
