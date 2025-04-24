@@ -17,7 +17,11 @@ class DetailsPage extends StatelessWidget {
               SizedBox(
                 height: 25,
               ),
-              ProductInfo()
+              ProductInfo(),
+              SizedBox(
+                height: 25,
+              ),
+              Info()
             ],
           ),
         ));
@@ -233,6 +237,216 @@ class ProductInfo extends StatelessWidget {
                   fontFamily: 'Montserrat',
                   fontWeight: FontWeight.w600,
                 ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class Info extends StatelessWidget {
+  const Info({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        width: 335.w,
+        height: 112.h,
+        child: Stack(
+          children: [
+            Positioned(
+              left: 0,
+              top: 0,
+              child: Text(
+                'Facilities',
+                style: TextStyle(
+                  color: const Color(0xFF232323),
+                  fontSize: 18,
+                  fontFamily: 'Montserrat',
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+            Positioned(
+              left: 0,
+              top: 38.h,
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                spacing: 14.w,
+                children: [
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 12),
+                    decoration: ShapeDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment(0.99, 0.72),
+                        end: Alignment(-0.03, 0.23),
+                        colors: [
+                          const Color(0xFFF3F8FE),
+                          const Color(0xFFF3F8FE)
+                        ],
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      spacing: 6.w,
+                      children: [
+                        Container(
+                          width: 32.w,
+                          height: 32.h,
+                          clipBehavior: Clip.antiAlias,
+                          decoration: BoxDecoration(),
+                          child: Stack(),
+                        ),
+                        Text(
+                          '1 Heater',
+                          style: TextStyle(
+                            color: const Color(0xFFB7B7B7),
+                            fontSize: 10,
+                            fontFamily: 'CircularXX',
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 12),
+                    decoration: ShapeDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment(0.99, 0.72),
+                        end: Alignment(-0.03, 0.23),
+                        colors: [
+                          const Color(0xFFF3F8FE),
+                          const Color(0xFFF3F8FE)
+                        ],
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      spacing: 6,
+                      children: [
+                        Container(
+                          width: 32.w,
+                          height: 32.h,
+                          clipBehavior: Clip.antiAlias,
+                          decoration: BoxDecoration(),
+                          child: Stack(),
+                        ),
+                        Text(
+                          'Dinner',
+                          style: TextStyle(
+                            color: const Color(0xFFC8C8C8),
+                            fontSize: 10,
+                            fontFamily: 'CircularXX',
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 12),
+                    decoration: ShapeDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment(0.99, 0.72),
+                        end: Alignment(-0.03, 0.23),
+                        colors: [
+                          const Color(0xFFF3F8FE),
+                          const Color(0xFFF3F8FE)
+                        ],
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      spacing: 6,
+                      children: [
+                        Container(
+                          transform: Matrix4.identity()
+                            ..translate(0.0, 0.0)
+                            ..rotateZ(3.14),
+                          width: 32.w,
+                          height: 32.h,
+                          clipBehavior: Clip.antiAlias,
+                          decoration: BoxDecoration(),
+                          child: Stack(),
+                        ),
+                        Text(
+                          '1 Tub',
+                          style: TextStyle(
+                            color: const Color(0xFFC8C8C8),
+                            fontSize: 10,
+                            fontFamily: 'CircularXX',
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 12),
+                    decoration: ShapeDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment(0.99, 0.72),
+                        end: Alignment(-0.03, 0.23),
+                        colors: [
+                          const Color(0xFFF3F8FE),
+                          const Color(0xFFF3F8FE)
+                        ],
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      spacing: 6,
+                      children: [
+                        Container(
+                          width: 32.w,
+                          height: 32.h,
+                          clipBehavior: Clip.antiAlias,
+                          decoration: BoxDecoration(),
+                          child: Stack(),
+                        ),
+                        Text(
+                          'Pool',
+                          style: TextStyle(
+                            color: const Color(0xFFC8C8C8),
+                            fontSize: 10,
+                            fontFamily: 'CircularXX',
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
