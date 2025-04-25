@@ -306,7 +306,13 @@ class Info extends StatelessWidget {
                           height: 32.h,
                           clipBehavior: Clip.antiAlias,
                           decoration: BoxDecoration(),
-                          child: Stack(),
+                          child: Stack(children: [
+                            SvgPicture.asset(
+                              'assets/icons/Vector.svg',
+                          width: 32.w,
+                          height: 32.h,
+                            ),
+                          ]),
                         ),
                         Text(
                           '1 Heater',
@@ -347,7 +353,13 @@ class Info extends StatelessWidget {
                           height: 32.h,
                           clipBehavior: Clip.antiAlias,
                           decoration: BoxDecoration(),
-                          child: Stack(),
+                          child: Stack(children: [
+                            SvgPicture.asset(
+                              'assets/icons/Vector (1).svg',
+                          width: 32.w,
+                          height: 32.h,
+                            ),
+                          ]),
                         ),
                         Text(
                           'Dinner',
@@ -381,22 +393,25 @@ class Info extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
-                      spacing: 6,
+                      spacing: 6.w,
                       children: [
                         Container(
-                          transform: Matrix4.identity()
-                            ..translate(0.0, 0.0)
-                            ..rotateZ(3.14),
                           width: 32.w,
                           height: 32.h,
                           clipBehavior: Clip.antiAlias,
                           decoration: BoxDecoration(),
-                          child: Stack(),
+                          child: Stack(children: [
+                            SvgPicture.asset(
+                              'assets/icons/Vector (2).svg',
+                          width: 32.w,
+                          height: 32.h,
+                            ),
+                          ]),
                         ),
                         Text(
-                          '1 Tub',
+                          '1 Heater',
                           style: TextStyle(
-                            color: const Color(0xFFC8C8C8),
+                            color: const Color(0xFFB7B7B7),
                             fontSize: 10,
                             fontFamily: 'CircularXX',
                             fontWeight: FontWeight.w400,
@@ -432,7 +447,13 @@ class Info extends StatelessWidget {
                           height: 32.h,
                           clipBehavior: Clip.antiAlias,
                           decoration: BoxDecoration(),
-                          child: Stack(),
+                          child: Stack(children: [
+                            SvgPicture.asset(
+                              'assets/icons/Vector (3).svg',
+                          width: 32.w,
+                          height: 32.h,
+                            ),
+                          ]),
                         ),
                         Text(
                           'Pool',
