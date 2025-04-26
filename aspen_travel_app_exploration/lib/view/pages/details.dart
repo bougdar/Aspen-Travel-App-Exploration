@@ -11,18 +11,18 @@ class DetailsPage extends StatelessWidget {
         backgroundColor: Colors.white,
         body: SafeArea(
           top: true,
-          child: Column(
-            children: [
-              ProductImage(),
-              SizedBox(
-                height: 25,
-              ),
-              ProductInfo(),
-              SizedBox(
-                height: 25,
-              ),
-              Info()
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                ProductImage(),
+                SizedBox(height: 25),
+                ProductInfo(),
+                SizedBox(height: 25),
+                Info(),
+                SizedBox(height: 25),
+                Book()
+              ],
+            ),
           ),
         ));
   }
@@ -309,8 +309,8 @@ class Info extends StatelessWidget {
                           child: Stack(children: [
                             SvgPicture.asset(
                               'assets/icons/Vector.svg',
-                          width: 32.w,
-                          height: 32.h,
+                              width: 32.w,
+                              height: 32.h,
                             ),
                           ]),
                         ),
@@ -356,8 +356,8 @@ class Info extends StatelessWidget {
                           child: Stack(children: [
                             SvgPicture.asset(
                               'assets/icons/Vector (1).svg',
-                          width: 32.w,
-                          height: 32.h,
+                              width: 32.w,
+                              height: 32.h,
                             ),
                           ]),
                         ),
@@ -403,8 +403,8 @@ class Info extends StatelessWidget {
                           child: Stack(children: [
                             SvgPicture.asset(
                               'assets/icons/Vector (2).svg',
-                          width: 32.w,
-                          height: 32.h,
+                              width: 32.w,
+                              height: 32.h,
                             ),
                           ]),
                         ),
@@ -450,8 +450,8 @@ class Info extends StatelessWidget {
                           child: Stack(children: [
                             SvgPicture.asset(
                               'assets/icons/Vector (3).svg',
-                          width: 32.w,
-                          height: 32.h,
+                              width: 32.w,
+                              height: 32.h,
                             ),
                           ]),
                         ),
@@ -468,6 +468,106 @@ class Info extends StatelessWidget {
                     ),
                   ),
                 ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class Book extends StatelessWidget {
+  const Book({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        width: 335.w,
+        height: 56.h,
+        decoration: ShapeDecoration(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
+        ),
+        child: Stack(
+          children: [
+            Positioned(
+              left: 112.w,
+              top: 0,
+              child: Container(
+                width: 223.w,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                decoration: ShapeDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment(0.99, 0.72),
+                    end: Alignment(-0.03, 0.23),
+                    colors: [const Color(0xFF176EF2), const Color(0xFF186EEE)],
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  shadows: [
+                    BoxShadow(
+                      color: Color(0x3D0038FF),
+                      blurRadius: 19,
+                      offset: Offset(0, 6),
+                      spreadRadius: 0,
+                    )
+                  ],
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  spacing: 10,
+                  children: [
+                    Text(
+                      'Book Now',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontFamily: 'CircularXX',
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                    Container(width: 24.w, height: 24.h, child: Stack(children: [
+                            SvgPicture.asset(
+                              'assets/icons/Arrow - Right.svg',
+                              width: 24.w,
+                              height: 24.h,
+                            ),
+                          ],)),
+                  ],
+                ),
+              ),
+            ),
+            Positioned(
+              left: 0,
+              top: 4,
+              child: Text(
+                'Price',
+                style: TextStyle(
+                  color: const Color(0xFF232323),
+                  fontSize: 12,
+                  fontFamily: 'CircularXX',
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
+            Positioned(
+              left: 0,
+              top: 23,
+              child: Text(
+                '\$199',
+                style: TextStyle(
+                  color: const Color(0xFF2CD6A3),
+                  fontSize: 24,
+                  fontFamily: 'Montserrat',
+                  fontWeight: FontWeight.w700,
+                ),
               ),
             ),
           ],
