@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:aspen_travel_app_exploration/view/widget/bottom.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -289,161 +290,166 @@ class Popular extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Container(
-                      width: 188.w,
-                      height: 240.h,
-                      child: Stack(
-                        children: [
-                          Positioned(
-                            left: 0,
-                            top: 0,
-                            child: Container(
-                              width: 188.w,
-                              height: 240.h,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(24),
-                                image: DecorationImage(
-                                  image: AssetImage(
-                                      "assets/images/istockphoto-104731717-612x612.jpg"),
-                                  fit: BoxFit.cover,
+                    GestureDetector(
+                      onTap: () {
+                        Get.toNamed('/DetailsPage');
+                      },
+                      child: Container(
+                        width: 188.w,
+                        height: 240.h,
+                        child: Stack(
+                          children: [
+                            Positioned(
+                              left: 0,
+                              top: 0,
+                              child: Container(
+                                width: 188.w,
+                                height: 240.h,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(24),
+                                  image: DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/istockphoto-104731717-612x612.jpg"),
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                          Positioned(
-                            left: 0,
-                            top: 0,
-                            child: Container(
-                              width: 188.w,
-                              height: 240.h,
-                              decoration: ShapeDecoration(
-                                gradient: LinearGradient(
-                                  begin: Alignment(0.50, 0.79),
-                                  end: Alignment(0.50, 1.00),
-                                  colors: [
-                                    const Color(0x002A5A52),
-                                    const Color(0xFF2A5A52)
+                            Positioned(
+                              left: 0,
+                              top: 0,
+                              child: Container(
+                                width: 188.w,
+                                height: 240.h,
+                                decoration: ShapeDecoration(
+                                  gradient: LinearGradient(
+                                    begin: Alignment(0.50, 0.79),
+                                    end: Alignment(0.50, 1.00),
+                                    colors: [
+                                      const Color(0x002A5A52),
+                                      const Color(0xFF2A5A52)
+                                    ],
+                                  ),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(24),
+                                  ),
+                                  shadows: [
+                                    BoxShadow(
+                                      color: Color(0x492381D7),
+                                      blurRadius: 25.79,
+                                      offset: Offset(0, 11.05),
+                                      spreadRadius: 0,
+                                    )
                                   ],
                                 ),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(24),
-                                ),
-                                shadows: [
-                                  BoxShadow(
-                                    color: Color(0x492381D7),
-                                    blurRadius: 25.79,
-                                    offset: Offset(0, 11.05),
-                                    spreadRadius: 0,
-                                  )
-                                ],
                               ),
                             ),
-                          ),
-                          Positioned(
-                            left: 148.w,
-                            top: 200.h,
-                            child: Container(
-                              width: 24.w,
-                              height: 24.h,
-                              decoration: ShapeDecoration(
-                                color: const Color(0xFFF3F8FE),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(80),
+                            Positioned(
+                              left: 148.w,
+                              top: 200.h,
+                              child: Container(
+                                width: 24.w,
+                                height: 24.h,
+                                decoration: ShapeDecoration(
+                                  color: const Color(0xFFF3F8FE),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(80),
+                                  ),
+                                ),
+                                child: Stack(
+                                  children: [
+                                    Center(
+                                      child: SvgPicture.asset(
+                                        'assets/icons/Group 3418.svg',
+                                        width: 15.w,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
-                              child: Stack(
+                            ),
+                            Positioned(
+                              left: 12.w,
+                              top: 175.h,
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                spacing: 6,
                                 children: [
-                                  Center(
-                                    child: SvgPicture.asset(
-                                      'assets/icons/Group 3418.svg',
-                                      width: 15.w,
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 12, vertical: 4),
+                                    decoration: ShapeDecoration(
+                                      color: const Color(0xFF4C5652),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(59),
+                                      ),
+                                    ),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      spacing: 10,
+                                      children: [
+                                        Text(
+                                          'Alley Palace',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 12,
+                                            fontFamily: 'CircularXX',
+                                            fontWeight: FontWeight.w400,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 10, vertical: 4),
+                                    decoration: ShapeDecoration(
+                                      color: const Color(0xFF4C5652),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(59),
+                                      ),
+                                    ),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      spacing: 4.w,
+                                      children: [
+                                        Container(
+                                            width: 16.w,
+                                            height: 16.h,
+                                            child: Stack(
+                                              children: [
+                                                SvgPicture.asset(
+                                                  'assets/icons/star.svg',
+                                                  width: 16.w,
+                                                  height: 16.h,
+                                                ),
+                                              ],
+                                            )),
+                                        Text(
+                                          '4.1',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 10,
+                                            fontFamily: 'CircularXX',
+                                            fontWeight: FontWeight.w400,
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
                                 ],
                               ),
                             ),
-                          ),
-                          Positioned(
-                            left: 12.w,
-                            top: 175.h,
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              spacing: 6,
-                              children: [
-                                Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 12, vertical: 4),
-                                  decoration: ShapeDecoration(
-                                    color: const Color(0xFF4C5652),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(59),
-                                    ),
-                                  ),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    spacing: 10,
-                                    children: [
-                                      Text(
-                                        'Alley Palace',
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 12,
-                                          fontFamily: 'CircularXX',
-                                          fontWeight: FontWeight.w400,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 10, vertical: 4),
-                                  decoration: ShapeDecoration(
-                                    color: const Color(0xFF4C5652),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(59),
-                                    ),
-                                  ),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    spacing: 4.w,
-                                    children: [
-                                      Container(
-                                          width: 16.w,
-                                          height: 16.h,
-                                          child: Stack(
-                                            children: [
-                                              SvgPicture.asset(
-                                                'assets/icons/star.svg',
-                                                width: 16.w,
-                                                height: 16.h,
-                                              ),
-                                            ],
-                                          )),
-                                      Text(
-                                        '4.1',
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 10,
-                                          fontFamily: 'CircularXX',
-                                          fontWeight: FontWeight.w400,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                     const SizedBox(width: 16),

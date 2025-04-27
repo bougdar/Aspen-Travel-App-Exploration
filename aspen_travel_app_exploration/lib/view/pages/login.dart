@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -28,43 +29,49 @@ class LoginPage extends StatelessWidget {
           Positioned(
             left: 32.w,
             top: 712.h,
-            child: Container(
-              width: 311.w,
-              padding: const EdgeInsets.symmetric(horizontal: 44, vertical: 16),
-              decoration: ShapeDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment(0.99, 0.72),
-                  end: Alignment(-0.03, 0.23),
-                  colors: [const Color(0xFF176EF2), const Color(0xFF186EEE)],
-                ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                shadows: [
-                  BoxShadow(
-                    color: Color(0x141C17F2),
-                    blurRadius: 33,
-                    offset: Offset(0, 4),
-                    spreadRadius: 0,
-                  )
-                ],
-              ),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                spacing: 10,
-                children: [
-                  Text(
-                    'Explore',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontFamily: 'CircularXX',
-                      fontWeight: FontWeight.w700,
-                    ),
+            child: GestureDetector(
+              onTap: () {
+                Get.toNamed('/HomePage');
+              },
+              child: Container(
+                width: 311.w,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 44, vertical: 16),
+                decoration: ShapeDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment(0.99, 0.72),
+                    end: Alignment(-0.03, 0.23),
+                    colors: [const Color(0xFF176EF2), const Color(0xFF186EEE)],
                   ),
-                ],
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  shadows: [
+                    BoxShadow(
+                      color: Color(0x141C17F2),
+                      blurRadius: 33,
+                      offset: Offset(0, 4),
+                      spreadRadius: 0,
+                    )
+                  ],
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  spacing: 10,
+                  children: [
+                    Text(
+                      'Explore',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontFamily: 'CircularXX',
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

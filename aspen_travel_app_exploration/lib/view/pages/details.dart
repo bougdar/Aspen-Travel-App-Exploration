@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 class DetailsPage extends StatelessWidget {
   const DetailsPage({super.key});
@@ -46,7 +47,7 @@ class ProductImage extends StatelessWidget {
                 width: 335.w,
                 height: 386.h,
                 decoration: ShapeDecoration(
-                  color: const Color(0xFFC4C4C4),
+                  color: const Color.fromARGB(0, 255, 255, 255),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
@@ -58,7 +59,7 @@ class ProductImage extends StatelessWidget {
               top: 0,
               child: Container(
                 width: 335.w,
-                height: 386.h,
+                height: 340.h,
                 decoration: ShapeDecoration(
                   image: DecorationImage(
                     image: AssetImage(
@@ -107,16 +108,31 @@ class ProductImage extends StatelessWidget {
             Positioned(
               left: 12.w,
               top: 12.h,
-              child: Container(
-                width: 40.w,
-                height: 40.h,
-                clipBehavior: Clip.antiAlias,
-                decoration: ShapeDecoration(
-                  color: const Color(0xFFF3F8FE),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8)),
+              child: GestureDetector(
+                onTap: () {
+                  Get.back();
+                },
+                child: Container(
+                  width: 40.w,
+                  height: 40.h,
+                  clipBehavior: Clip.antiAlias,
+                  decoration: ShapeDecoration(
+                    color: const Color(0xFFF3F8FE),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8)),
+                  ),
+                  child: Center(
+                    child: Stack(
+                      children: [
+                        SvgPicture.asset(
+                          'assets/icons/Vector (4).svg',
+                          width: 20.w,
+                          height: 20.h,
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
-                child: Stack(),
               ),
             ),
           ],
@@ -533,13 +549,18 @@ class Book extends StatelessWidget {
                         fontWeight: FontWeight.w700,
                       ),
                     ),
-                    Container(width: 24.w, height: 24.h, child: Stack(children: [
+                    Container(
+                        width: 24.w,
+                        height: 24.h,
+                        child: Stack(
+                          children: [
                             SvgPicture.asset(
                               'assets/icons/Arrow - Right.svg',
                               width: 24.w,
                               height: 24.h,
                             ),
-                          ],)),
+                          ],
+                        )),
                   ],
                 ),
               ),
