@@ -16,11 +16,11 @@ class DetailsPage extends StatelessWidget {
             child: Column(
               children: [
                 ProductImage(),
-                SizedBox(height: 25),
+                SizedBox(height: 20),
                 ProductInfo(),
-                SizedBox(height: 25),
+                SizedBox(height: 20),
                 Info(),
-                SizedBox(height: 25),
+                SizedBox(height: 20),
                 Book()
               ],
             ),

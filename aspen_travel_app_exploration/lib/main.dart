@@ -7,6 +7,7 @@ import 'Controller/BottomNavController.dart';
 import 'route.dart';
 
 void main() {
+  
   Get.put(BottomNavController());
   runApp(const MyApp());
 }
@@ -21,9 +22,11 @@ class MyApp extends StatelessWidget {
       designSize: figmaDesignSize,
       minTextAdapt: true,
       splitScreenMode: true,
+      
       builder: (context, _) {
         return GetMaterialApp(
           title: 'Flutter Demo',
+          debugShowCheckedModeBanner: false,
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,

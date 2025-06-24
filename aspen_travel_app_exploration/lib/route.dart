@@ -13,7 +13,7 @@ class AppRoutes {
     GetPage(name: '/TicketPage', page: () => const TicketPage()),
     GetPage(name: '/FavouritePage', page: () => const FavouritePage()),
     GetPage(name: '/ProfilePage', page: () => ProfilePage()),
-        GetPage(name: '/DetailsPage', page: () => DetailsPage()),
+    GetPage(name: '/DetailsPage', page: () => DetailsPage()),
 
 
   ];
